@@ -5,12 +5,12 @@ var jwt=require('jsonwebtoken');
 
 var users=[
 {
-  name:"xxxx",
-  password:"xxxx"
+  name:"panos",
+  password:"test"
 },
 {
-  name:"yyyy",
-  password:"yyyy"
+  name:"test",
+  password:"test"
 }
 ]
 app.use( bodyParser.json() );

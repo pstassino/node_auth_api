@@ -48,7 +48,7 @@
                 xhttp.onreadystatechange = function() {
                     if (xhttp.readyState==4 && xhttp.status==200) {
                         var response = JSON.parse(xhttp.responseText);
-                        document.getElementById("token-display").innerHTML = response.token;
+                        document.getElementById("token").value = response.token;
                     }
                     if(xhttp.readyState==4 && xhttp.status==403){
                       document.getElementById("token-display").innerHTML=JSON.parse(xhttp.responseText).message;
@@ -60,7 +60,7 @@
             }
             getlist= function(){
                 var xhttp = new XMLHttpRequest();
-               data={token:document.getElementById("token").value}
+                data={token:document.getElementById("token").value}
                 xhttp.onreadystatechange = function() {
                     if (xhttp.readyState==4 && xhttp.status==200) {
                         var response = JSON.parse(xhttp.responseText);
